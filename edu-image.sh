@@ -27,6 +27,10 @@ mv wpa_supplicant /etc/wpa_supplicant/wpa_supplicant
 wget -q http://rogerthat.co.uk/Pi/interfaces
 mv interfaces /etc/network/interfaces
 
+echo "Installing MOTD"
+wget -q http://rogerthat.co.uk/Pi/motd
+mv motd /etc/motd
+
 echo "Installing from Pip3"
 sudo pip3 -q install guizero twython python-osc explorerhat pibrella piglow requests-oauthlib pyinstaller codebug-i2c-tether codebug-tether --upgrade
 sudo pip -q install explorerhat pibrella piglow requests-oauthlib pyinstaller 
