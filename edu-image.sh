@@ -44,6 +44,7 @@ echo "Setting Wallpaper"
 wget https://github.com/raspberrypilearning/edu-image/raw/master/Raspbain-Desktop-Background-1366x768px.png
 sudo mv Raspbain-Desktop-Background-1366x768px.png /usr/share/rpd-wallpaper/picademy.png
 sed -i -e 's/road.jpg/picademy.png/g' .config/pcmanfm/LXDE-pi/desktop-items-0.conf
+pcmanfm -w /usr/share/rpd-wallpaper/picademy.png
 
 echo "Setting up Resize"
 sudo wget -q https://raw.githubusercontent.com/raspberrypilearning/edu-image/master/cmdline.txt -O /boot/cmdline.txt
