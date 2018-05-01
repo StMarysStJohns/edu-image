@@ -22,7 +22,7 @@ sudo apt-get install -qqy epoptes-client
 sudo epoptes-client -c
 
 echo "Setting up WiFi"
-wget -q http://rogerthat.co.uk/Pi/wpa_supplicant
+wget -q http://rogerthat.co.uk/Pi/wpa_supplicant.conf
 sudo mv wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 wget -q http://rogerthat.co.uk/Pi/interfaces
 sudo mv interfaces /etc/network/interfaces
