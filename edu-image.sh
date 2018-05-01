@@ -3,8 +3,8 @@
 echo "Raspi-Config steps"
 sudo raspi-config nonint do_camera 0
 sudo raspi-config nonint do_i2c 0
-sudo raspi-config nonint do_vnc 0
-sudo raspi-config nonint do_ssh 0
+sudo raspi-config nonint do_vnc 1
+sudo raspi-config nonint do_ssh 1
 
 echo "Updating...."
 sleep 2
@@ -17,7 +17,15 @@ sudo rpi-update
 echo "Installing from apt"
 sudo apt-get install -qqy mu python-numpy python-wxversion python-wxgtk3.0 python-pyparsing python-cairo libhidapi-libusb0 gnome-schedule python3-pyqt5 python3-pyqt5.qsci python3-pyqt5.qtserialport python3-pyqt5.qtsvg python3-dev libav-tools ffmpeg
 
-echo "Installing from deb"
+echo "Installing epoptes"
+sudo apt-get install epoptes-client
+sudo epoptes-client -c
+
+echo "Setting up WiFi"
+wget -q http://rogerthat.co.uk/Pi/wpa_supplicant
+mv wpa_supplicant /etc/wpa_supplicant/wpa_supplicant
+wget -q http://rogerthat.co.uk/Pi/interfaces
+mv interfaces /etc/network/interfaces
 
 echo "Installing from Pip3"
 sudo pip3 -q install guizero twython python-osc explorerhat pibrella piglow requests-oauthlib pyinstaller codebug-i2c-tether codebug-tether --upgrade
@@ -41,4 +49,3 @@ sudo systemctl enable resize2fs_once
 
 
 echo "Complete, ready to halt. Type 'sudo halt' and then, if cloning, compress image in another machine."
-
