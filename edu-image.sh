@@ -41,8 +41,8 @@ sudo dpkg -i crumble_0.25.1_all.deb
 rm crumble_0.25.1_all.deb
 
 echo "Setting Wallpaper"
-wget https://github.com/raspberrypilearning/edu-image/raw/master/Raspbain-Desktop-Background-1366x768px.png
-sudo mv Raspbain-Desktop-Background-1366x768px.png /usr/share/rpd-wallpaper/smsj.png
+wget https://raw.githubusercontent.com/Roobinson/edu-image/master/Raspbain-Desktop-Background-1366x768.png
+sudo mv Raspbain-Desktop-Background-1366x768.png /usr/share/rpd-wallpaper/smsj.png
 sed -i -e 's/road.jpg/smsj.png/g' .config/pcmanfm/LXDE-pi/desktop-items-0.conf
 pcmanfm -w /usr/share/rpd-wallpaper/smsj.png
 
