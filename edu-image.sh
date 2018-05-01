@@ -23,13 +23,13 @@ sudo epoptes-client -c
 
 echo "Setting up WiFi"
 wget -q http://rogerthat.co.uk/Pi/wpa_supplicant
-mv wpa_supplicant /etc/wpa_supplicant/wpa_supplicant
+sudo mv wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 wget -q http://rogerthat.co.uk/Pi/interfaces
-mv interfaces /etc/network/interfaces
+sudo mv interfaces /etc/network/interfaces
 
 echo "Installing MOTD"
 wget -q http://rogerthat.co.uk/Pi/motd
-mv motd /etc/motd
+sudo mv motd /etc/motd
 
 echo "Installing from Pip3"
 sudo pip3 -q install guizero twython python-osc explorerhat pibrella piglow requests-oauthlib pyinstaller codebug-i2c-tether codebug-tether --upgrade
