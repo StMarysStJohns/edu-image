@@ -20,6 +20,8 @@ sudo apt-get install -qqy mu python-numpy python-wxversion python-wxgtk3.0 pytho
 echo "Installing epoptes"
 sudo apt-get install -qqy epoptes-client
 sudo epoptes-client -c
+wget -q http://rogerthat.co.uk/Pi/hosts
+sudo mv hosts /etc/hosts
 
 echo "Setting up WiFi"
 wget -q http://rogerthat.co.uk/Pi/wpa_supplicant.conf
