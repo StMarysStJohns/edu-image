@@ -38,9 +38,9 @@ sudo pip3 -q install guizero twython python-osc explorerhat pibrella piglow requ
 sudo pip -q install explorerhat pibrella piglow requests-oauthlib pyinstaller 
 
 echo "Installing Crumble"
-wget -q http://redfernelectronics.co.uk/?ddownload=3869 -O crumble_0.25.1_all.deb
-sudo dpkg -i crumble_0.25.1_all.deb 
-rm crumble_0.25.1_all.deb
+wget -q http://redfernelectronics.co.uk/?ddownload=3869 -O crumble_0.25.2_all.deb
+sudo dpkg -i crumble_0.25.2_all.deb 
+rm crumble_0.25.2_all.deb
 
 echo "Setting Wallpaper"
 wget https://raw.githubusercontent.com/Roobinson/edu-image/master/Raspbain-Desktop-Background-1366x768.png
