@@ -55,5 +55,8 @@ sudo wget -O /etc/init.d/resize2fs_once https://github.com/RPi-Distro/pi-gen/raw
 sudo chmod +x /etc/init.d/resize2fs_once
 sudo systemctl enable resize2fs_once
 
+echo "Enabling network interfaces"
+sudo rm -rf /etc/network/interfaces
+
 echo "Complete, ready to halt. Type 'sudo halt' and then shutdown. Else 'sudo reboot' to use immediately."
 
