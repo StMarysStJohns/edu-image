@@ -44,7 +44,8 @@ rm crumble_0.25.2_all.deb
 
 echo "Setting Wallpaper"
 wget https://raw.githubusercontent.com/Roobinson/edu-image/master/Raspbain-Desktop-Background-1366x768.png
-sudo mv Raspbain-Desktop-Background-1366x768.png /usr/share/rpd-wallpaper/smsj.png
+sudo cp Raspbain-Desktop-Background-1366x768.png /usr/share/rpd-wallpaper/smsj.png
+sudo cp Raspbain-Desktop-Background-1366x768.png /usr/share/pt-artwork/img/wallpapers/Grid.png
 sed -i -e 's/road.jpg/smsj.png/g' .config/pcmanfm/LXDE-pi/desktop-items-0.conf
 pcmanfm -w /usr/share/rpd-wallpaper/smsj.png
 
@@ -54,5 +55,5 @@ sudo wget -O /etc/init.d/resize2fs_once https://github.com/RPi-Distro/pi-gen/raw
 sudo chmod +x /etc/init.d/resize2fs_once
 sudo systemctl enable resize2fs_once
 
+echo "Complete, ready to halt. Type 'sudo halt' and then shutdown. Else 'sudo reboot' to use immediately."
 
-echo "Complete, ready to halt. Type 'sudo halt' and then, if cloning, compress image in another machine."
