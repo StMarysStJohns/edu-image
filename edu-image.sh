@@ -12,7 +12,6 @@ sleep 2
 sudo apt-get -qq update
 sudo apt-get -qqy upgrade 
 sudo apt-get -qqy dist-upgrade
-sudo rpi-update
 
 echo "Installing from apt"
 sudo apt-get install -qqy mu python-numpy python-wxversion python-wxgtk3.0 python-pyparsing python-cairo libhidapi-libusb0 gnome-schedule python3-pyqt5 python3-pyqt5.qsci python3-pyqt5.qtserialport python3-pyqt5.qtsvg python3-dev libav-tools ffmpeg
@@ -48,12 +47,6 @@ sudo cp Raspbain-Desktop-Background-1366x768.png /usr/share/rpd-wallpaper/smsj.p
 sudo cp Raspbain-Desktop-Background-1366x768.png /usr/share/pt-artwork/img/wallpapers/Grid.png
 sed -i -e 's/road.jpg/smsj.png/g' .config/pcmanfm/LXDE-pi/desktop-items-0.conf
 pcmanfm -w /usr/share/rpd-wallpaper/smsj.png
-
-echo "Setting up Resize"
-sudo wget -q https://raw.githubusercontent.com/raspberrypilearning/edu-image/master/cmdline.txt -O /boot/cmdline.txt
-sudo wget -O /etc/init.d/resize2fs_once https://github.com/RPi-Distro/pi-gen/raw/dev/stage2/01-sys-tweaks/files/resize2fs_once
-sudo chmod +x /etc/init.d/resize2fs_once
-sudo systemctl enable resize2fs_once
 
 echo "Enabling network interfaces"
 sudo rm -rf /etc/network/interfaces
